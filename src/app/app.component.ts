@@ -1,12 +1,22 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  imports: [FormsModule]
 })
 export class AppComponent {
-  title = 'proejto-bd';
+  email: string = '';
+  password: string = '';
+
+  onSubmit() {
+    if (this.email === 'admin@example.com' && this.password === '123456') {
+      alert('Login bem-sucedido!');
+    } else {
+      alert('Credenciais inválidas.');
+    }
+  }
 }
