@@ -1,77 +1,111 @@
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #fff5f5;
+:root {
+  --green-dark: #1b5e20;
+  --green-light: #a5d6a7;
+  --white: #ffffff;
+  --gray: #f5f5f5;
+  --font-main: 'Segoe UI', sans-serif;
 }
 
-header {
-  background: linear-gradient(to right, #ff3d00, #ff6f00);
-  color: white;
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--white);
+  color: var(--green-dark);
+}
+
+.header {
+  background-color: var(--green-dark);
+  color: var(--white);
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  padding: 1rem 2rem;
 }
 
-nav a {
-  color: white;
-  margin: 0 15px;
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav a {
+  color: var(--white);
+  margin-left: 1.5rem;
   text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
+  font-weight: 500;
 }
 
-nav a:hover {
-  color: #ffeb3b;
-}
-
-.banner {
+.hero {
+  background-color: var(--gray);
+  padding: 4rem 2rem;
   text-align: center;
-  padding: 50px;
-  /* background: url('assets/banner.jpg') no-repeat center; */
-  background-size: cover;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
 }
 
-button {
-  background: linear-gradient(to right, #ff3d00, #ff6f00);
-  color: white;
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background-color: var(--green-dark);
+  color: var(--white);
   border: none;
-  padding: 12px 24px;
-  font-size: 18px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
   cursor: pointer;
-  border-radius: 8px;
-  transition: 0.3s;
 }
 
-button:hover {
-  background: linear-gradient(to right, #c70039, #ff3d00);
+.catalog {
+  padding: 3rem 2rem;
+  background-color: var(--white);
+  text-align: center;
 }
 
-.menu .grid {
+.catalog h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.catalog-grid {
   display: flex;
-  gap: 20px;
   justify-content: center;
+  gap: 2rem;
   flex-wrap: wrap;
 }
 
-.item {
-  background: white;
-  padding: 20px;
+.catalog-item {
+  background-color: var(--gray);
+  padding: 1rem;
+  border-radius: 10px;
+  width: 250px;
   text-align: center;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
 }
 
-.item:hover {
-  transform: scale(1.05);
-}
-
-.item img {
+.catalog-item img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.catalog-item button {
+  background-color: var(--green-light);
+  border: none;
+  padding: 0.5rem 1rem;
+  color: var(--green-dark);
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.footer {
+  background-color: var(--green-dark);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
 }

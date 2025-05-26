@@ -1,0 +1,33 @@
+<header>
+
+  <div class="header_left">
+    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+      <path
+        d="M24.4437 12.5L21.0922 10.2656L1.49841 23.5L17.9984 34.5L34.4984 23.5L27.6234 18.9453L19.3734 24.5313L22.9828 26.8516L17.9984 29.8594L8.63122 23.5L24.4437 12.5Z"
+        fill="#FCFC30" />
+      <path d="M8.37341 29.9453L4.93591 27.625L1.49841 29.9453V34.5L8.37341 29.9453Z" fill="#FCFC30" />
+      <path
+        d="M34.4984 12.5L17.9984 1.5L1.49841 12.5L8.37341 17.0547L16.6234 11.4688L13.014 9.14844L17.9984 6.14063L27.3656 12.5L11.5531 23.5L14.9047 25.7344L34.4984 12.5Z"
+        fill="#FCFC30" />
+      <path d="M34.4984 6.05469V1.5L27.6234 6.05469L31.0609 8.375L34.4984 6.05469Z" fill="#FCFC30" />
+    </svg>
+    <div class="header_divisor"></div>
+    <h1>Pizzaria Palmeiras</h1>
+    <div class="header_divisor"></div>
+
+    <div class="header_menu">
+      <ul>
+        <li *ngFor="let item of items">
+          <a [routerLink]="item.routerLink">{{ item.label }}</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="header_right">
+    <img [src]="urlimagem" alt="Avatar">
+    <p>{{nome}}</p>
+  </div>
+
+</header>

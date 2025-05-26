@@ -1,30 +1,33 @@
-<div class="container">
-  <header class="text-center py-3 bg-danger text-white">
-    <h1>{{ title }}</h1>
-  </header>
+<app-header></app-header>
+<div class="home-container">
 
-  <section class="banner text-center py-5 text-white">
-    <h2>Peça sua pizza favorita agora!</h2>
-    <button class="btn btn-light mt-3">Ver Cardápio</button>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Comida saudável, sabor inesquecível</h1>
+      <p>Explore pratos frescos e naturais com um toque gourmet.</p>
+      <button class="cta-button">Ver Cardápio</button>
+    </div>
   </section>
 
-  <section class="menu">
-    <h2 class="text-center mt-5">🍕 Cardápio</h2>
-    <div class="row">
-      <div class="col-md-6" *ngFor="let pizza of menu">
-        <div class="card">
-          <img [src]="pizza.imagem" class="card-img-top" alt="{{ pizza.nome }}">
-          <div class="card-body text-center">
-            <h3>{{ pizza.nome }}</h3>
-            <p>{{ pizza.descricao }}</p>
-            <button class="btn btn-danger">Pedir</button>
-          </div>
-        </div>
+  <section class="catalog">
+    <h2>🌿 Destaques do Cardápio</h2>
+    <div class="catalog-grid">
+      <div class="catalog-item">
+        <img src="assets/images/dish1.jpg" alt="Prato 1">
+        <h3>Salada Verde</h3>
+        <p>Mix de folhas orgânicas com molho especial.</p>
+        <button>Adicionar</button>
+      </div>
+      <div class="catalog-item">
+        <img src="assets/images/dish2.jpg" alt="Prato 2">
+        <h3>Wrap Natural</h3>
+        <p>Recheado com legumes frescos e proteína vegetal.</p>
+        <button>Adicionar</button>
       </div>
     </div>
   </section>
 
-  <footer class="text-center mt-5 py-3 bg-dark text-white">
-    <p>&copy; 2025 Pizzaria Express - Todos os direitos reservados.</p>
+  <footer class="footer">
+    <p>&copy; 2025 Green Restaurant. Feito com 🌿 e carinho.</p>
   </footer>
 </div>

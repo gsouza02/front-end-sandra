@@ -1,0 +1,90 @@
+/* Estilo do cabeçalho */
+header {
+  display: flex;
+  height: 60px;
+  padding: 8px 16px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid #086d19;
+  background: var(--background-highlight-default, #086d19);
+}
+
+/* Estilo do lado esquerdo do cabeçalho */
+.header_left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.header_left h1 {
+  color: var(--specific-brand-header, #ffffff);
+  font-family: "arial";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 125%; /* 22.5px */
+  width: fit-content;
+}
+
+/* Estilo do menu no cabeçalho */
+.header_menu {
+  display: flex;
+  align-items: center;
+}
+
+.header_menu ul {
+  list-style-type: none; /* Remove os marcadores */
+  padding: 0; /* Remove o padding padrão */
+  margin: 0; /* Remove a margem padrão */
+  display: flex; /* Exibe os itens na horizontal */
+  gap: 28px;
+
+}
+
+.header_menu a{
+  color: var(--link-on-highlight, #ffffff);
+  font-family: "arial";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 112.5%; /* 18px */
+  letter-spacing: 0.08px;
+  text-decoration: none;
+}
+
+.header_menu a:hover {
+  color: var(--link-hover, #ffffff);
+  cursor: pointer;
+}
+
+/* Estilo do lado direito do cabeçalho */
+.header_right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+}
+
+.header_right p {
+  color: var(--text-on-highlight, #ffffff);
+  font-family: "arial";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 112.5%; /* 15.75px */
+  letter-spacing: 0.07px;
+}
+
+/* Estilo do divisor no cabeçalho */
+.header_divisor {
+  width: 2px;
+  align-self: stretch;
+  background: var(--specific-overlay-on-highlight, #ffffff);
+}
+
+/* Estilo das imagens no cabeçalho */
+img {
+  width: 40px;
+  border-radius: 4px;
+  border: 2px solid var(--border-on-highlight, rgba(253, 254, 255, 0.70));
+}
