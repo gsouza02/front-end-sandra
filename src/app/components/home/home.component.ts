@@ -31,11 +31,11 @@ export class HomeComponent implements OnInit {
     });
   }
   images = [
-    {
-      img: 'molde-carrossel-portal-super.png',
-      alt: 'Imagem 1',
-      title: 'Imagem 1'
-    },
+    // {
+    //   img: 'molde-carrossel-portal-super.png',
+    //   alt: 'Imagem 1',
+    //   title: 'Imagem 1'
+    // },
     {
       img: 'logo.png',
       alt: 'Imagem 2',
