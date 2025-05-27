@@ -84,7 +84,9 @@ header {
 
 /* Estilo das imagens no cabeçalho */
 img {
-  width: 40px;
+  width: 4%;
+  height: 4%;
   border-radius: 4px;
   border: 2px solid var(--border-on-highlight, rgba(253, 254, 255, 0.70));
+  background-color: #ffffff;
 }

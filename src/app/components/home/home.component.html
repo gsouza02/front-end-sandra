@@ -2,32 +2,16 @@
 <div class="home-container">
 
   <section class="hero">
-    <div class="hero-content">
-      <h1>Comida saudável, sabor inesquecível</h1>
-      <p>Explore pratos frescos e naturais com um toque gourmet.</p>
-      <button class="cta-button">Ver Cardápio</button>
-    </div>
-  </section>
-
-  <section class="catalog">
-    <h2>🌿 Destaques do Cardápio</h2>
-    <div class="catalog-grid">
-      <div class="catalog-item">
-        <img src="assets/images/dish1.jpg" alt="Prato 1">
-        <h3>Salada Verde</h3>
-        <p>Mix de folhas orgânicas com molho especial.</p>
-        <button>Adicionar</button>
-      </div>
-      <div class="catalog-item">
-        <img src="assets/images/dish2.jpg" alt="Prato 2">
-        <h3>Wrap Natural</h3>
-        <p>Recheado com legumes frescos e proteína vegetal.</p>
-        <button>Adicionar</button>
-      </div>
-    </div>
+   <p-carousel [value]="images">
+    <ng-template>
+      <div class="carousel-item" *ngFor="let image of images; let i = index">
+        <img [src]="image.previewImageSrc" alt="Image {{i + 1}}" class="carousel-image">
+      </div>  
+    </ng-template>
+   </p-carousel>
   </section>
 
   <footer class="footer">
-    <p>&copy; 2025 Green Restaurant. Feito com 🌿 e carinho.</p>
+    <p>&copy; 2025 Palmeiras Pizzaria.</p>
   </footer>
 </div>
