@@ -2,14 +2,27 @@
 <div class="home-container">
 
   <section class="hero">
-   <p-carousel [value]="images">
-    <ng-template>
-      <div class="carousel-item" *ngFor="let image of images; let i = index">
-        <img [src]="image.previewImageSrc" alt="Image {{i + 1}}" class="carousel-image">
-      </div>  
-    </ng-template>
-   </p-carousel>
-   <p>{{nome}}</p>
+    <div class="carrosel_container">
+      <p-carousel [value]="images" [numVisible]="1" [numScroll]="1" [showNavigators]="true" [circular]="true"
+        [indicatorStyle]="{ 'width': '80px', 'height': '8px', 'border-radius': '1' }">
+
+        <ng-template let-item #item>
+
+            <div class="carrosel_item_img">
+              <img src="{{item.img}}" alt="{{item.alt}}">
+            </div>
+
+          <!-- <div *ngIf="!item.link">
+        <div class="carrosel_item_img">
+          <img src="{{item.img}}" alt="{{item.alt}}">
+        </div>
+      </div> -->
+
+        </ng-template>
+      </p-carousel>
+    </div>
+
+    <p>{{nome}}</p>
   </section>
 
   <footer class="footer">
