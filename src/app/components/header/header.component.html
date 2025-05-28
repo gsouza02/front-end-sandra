@@ -1,7 +1,7 @@
 <header>
 
   <div class="header_left">
-    <img src="/logo.png" alt="logo">
+    <img class="header_logo" src="/logo.png" alt="logo">
     <div class="header_divisor"></div>
     <h1>Pizzaria Palmeiras</h1>
     <div class="header_divisor"></div>
@@ -17,8 +17,20 @@
   </div>
 
   <div class="header_right">
-    <img [src]="urlimagem" alt="Avatar">
-    <p>{{nome}}</p>
+    <mat-icon (click)="toggleDrawer()" style="color: white; cursor: pointer;">person</mat-icon>
+    <mat-icon style="color: white; cursor: pointer;" (click)="logout()">logout</mat-icon>
   </div>
-
+  
 </header>
+<app-drawer [(visible)]="visible">
+  <ng-container *ngIf="dadosCarregados" >
+    <h2>{{nome}}</h2>
+    <p><strong>Email:</strong> {{ email }}</p>
+      <p><strong>Telefone:</strong> {{ telefone }}</p>
+      <p><strong>CPF:</strong> {{ cpf }}</p>
+      <p><strong>Data de Nascimento:</strong> {{ formatarData(data_nascimento) }}</p>
+      <p><strong>Data de Cadastro:</strong> {{ formatarData(data_cadastro) }}</p>
+      <p><strong>Endereço:</strong> {{ endereco }}</p>
+      <button class="botao" *ngIf="qtdPedidos !== 0" routerLink="/pedidos">Meus pedidos</button>
+  </ng-container>
+</app-drawer>

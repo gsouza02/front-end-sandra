@@ -1,0 +1,13 @@
+<div class="sabor-card">
+    <img *ngIf="sabor" [src]="sabor.foto" alt="" class="sabor-img">
+    <div class="sabor-info">
+        <h3 class="sabor-nome">{{ sabor?.sabor }}</h3>
+        <p class="sabor-desc">{{ sabor?.descricao }}</p>
+        <p class="sabor-preco">R$ {{ sabor?.preco | number:'1.2-2' }}</p>
+        <div class="sabor-actions">
+            <button *ngIf="sabor?.quantidade !== 0"  (click)="remover()" class="sabor-btn">-</button>
+            <span class="sabor-quantidade">{{ sabor?.quantidade }}</span>
+            <button (click)="adicionar()" class="sabor-btn">+</button>
+        </div>
+    </div>
+</div>

@@ -4,26 +4,26 @@
   <section class="hero">
     <div class="carrosel_container">
       <p-carousel [value]="images" [numVisible]="1" [numScroll]="1" [showNavigators]="true" [circular]="true"
-        [indicatorStyle]="{ 'width': '80px', 'height': '8px', 'border-radius': '1' }">
+        [autoplayInterval]="3000" [indicatorStyle]="{ 'width': '80px', 'height': '8px', 'border-radius': '1' }">
 
         <ng-template let-item #item>
-
-            <div class="carrosel_item_img">
-              <img src="{{item.img}}" alt="{{item.alt}}">
-            </div>
-
-          <!-- <div *ngIf="!item.link">
-        <div class="carrosel_item_img">
-          <img src="{{item.img}}" alt="{{item.alt}}">
-        </div>
-      </div> -->
-
+          <div class="carrosel_item_img">
+            <img src="{{item.img}}" alt="{{item.alt}}">
+          </div>
         </ng-template>
       </p-carousel>
     </div>
 
-    <p>{{nome}}</p>
   </section>
+  
+
+  <div style="display:flex; flex-direction: column; justify-content: center; align-items: center;">
+    <h2>Contato</h2>
+    <h3>{{nome}}</h3>
+    <p>{{email}}</p>
+    <p>{{telefone}}</p>
+    <p>{{endereco}}</p>
+  </div>
 
   <footer class="footer">
     <p>&copy; 2025 Palmeiras Pizzaria.</p>

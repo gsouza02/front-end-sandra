@@ -1,0 +1,61 @@
+.sabor-card {
+  display: flex;
+  align-items: flex-start;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 12px 0;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.sabor-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 16px;
+}
+
+.sabor-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.sabor-nome {
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.sabor-desc {
+  margin: 0 0 8px 0;
+  color: #555;
+}
+
+.sabor-preco {
+  margin: 0;
+  color: #086d19;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.sabor-actions {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.sabor-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: #086d19;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 8px;
+  transition: background 0.2s;
+}

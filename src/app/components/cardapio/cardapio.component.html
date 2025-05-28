@@ -1,0 +1,12 @@
+<app-header></app-header>
+<div class="cardapio-container">
+  <ng-container *ngFor="let item of cardapio">
+    <app-sabor [sabor]="item"></app-sabor>
+  </ng-container>
+</div>
+<div class="cardapio-footer">
+  <div *ngIf="hasSelecionados()" class="preco-total">
+    <strong>Total:</strong> R$ {{ precoTotal | number:'1.2-2' }}
+  </div>
+  <button (click)="finalizarPedido()" class="btn btn-primary">Finalizar Pedido</button>
+</div>

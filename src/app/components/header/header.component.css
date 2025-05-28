@@ -60,19 +60,10 @@ header {
 /* Estilo do lado direito do cabeçalho */
 .header_right {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  gap: 8px;
-}
-
-.header_right p {
-  color: var(--text-on-highlight, #ffffff);
-  font-family: "arial";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 112.5%; /* 15.75px */
-  letter-spacing: 0.07px;
+  flex-direction: row;
+  width: 5%;
+  justify-content: space-between;
 }
 
 /* Estilo do divisor no cabeçalho */
@@ -83,10 +74,24 @@ header {
 }
 
 /* Estilo das imagens no cabeçalho */
-img {
+.header_logo {
   width: 4%;
   height: 4%;
   border-radius: 4px;
   border: 2px solid var(--border-on-highlight, rgba(253, 254, 255, 0.70));
   background-color: #ffffff;
+}
+
+
+.botao {
+  background: linear-gradient(90deg, #43a047 0%, #66bb6a 100%);
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 36px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 4px 16px rgba(67,160,71,0.15);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
 }

@@ -1,26 +1,28 @@
-<form [formGroup]="cadastroForm" (ngSubmit)="onSubmit()">
+<div style="display: flex; justify-content: center; align-items: center;">
+
+<form (ngSubmit)="onSubmit()">
   <h2>Cadastro de Usuário</h2>
 
   <label>Nome:</label>
-  <input type="text" formControlName="nome" placeholder="Seu nome">
+  <textarea  [(ngModel)]="nome" name="nome" placeholder="Seu nome"></textarea>
 
   <label>CPF:</label>
-  <input type="text" formControlName="cpf" placeholder="000.000.000-00">
+  <textarea type="number" [(ngModel)]="cpf" name="cpf" placeholder="cpf (somente números)" maxlength="11" minlength="11"></textarea>
 
   <label>Email:</label>
-  <input type="email" formControlName="email" placeholder="seuemail@email.com">
+  <textarea [(ngModel)]="email" name="email" placeholder="seuemail@email.com"></textarea>
 
   <label>Telefone:</label>
-  <input type="text" formControlName="telefone" placeholder="(99) 99999-9999">
+  <textarea [(ngModel)]="telefone" maxlength="11" minlength="11" name="telefone" placeholder="ddd + telefone (somente números)"></textarea>
 
   <label>Endereço:</label>
-  <input type="text" formControlName="endereco" placeholder="Rua, número, bairro">
+  <textarea [(ngModel)]="endereco" name="endereco" placeholder="Endereço completo"></textarea>
 
   <label>Data de Nascimento:</label>
-  <input type="date" formControlName="dataNascimento">
+  <input type="date" [(ngModel)]="dataNascimento" name="dataNascimento">
 
   <label>Senha:</label>
-  <input type="password" formControlName="senha" placeholder="Crie uma senha segura">
-
-  <button type="submit" [disabled]="!cadastroForm.valid">Cadastrar</button>
+  <input type="password" [(ngModel)]="senha" name="senha" placeholder="Crie uma senha segura">
+  <button type="submit">Cadastrar</button>
 </form>
+</div>

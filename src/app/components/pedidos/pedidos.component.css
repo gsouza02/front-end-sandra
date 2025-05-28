@@ -1,0 +1,52 @@
+.pedidos-container {
+  max-width: 800px;
+  margin: 32px auto;
+  padding: 16px;
+}
+
+.pedido-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  padding: 16px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.pedido-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.sabores-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sabor-item {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #eee;
+  padding-top: 12px;
+  margin-top: 8px;
+}
+
+.sabor-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 16px;
+}
+
+.sabor-info h4 {
+  margin: 0 0 4px 0;
+}
+
+.sabor-info p {
+  margin: 2px 0;
+  font-size: 0.98rem;
+}

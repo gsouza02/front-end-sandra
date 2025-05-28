@@ -1,0 +1,22 @@
+<app-header></app-header>
+<div class="pedidos-container">
+  <h2>Meus Pedidos</h2>
+  <div *ngFor="let pedido of pedidos" class="pedido-card">
+    <div class="pedido-header">
+      <span><strong>ID Pedido:</strong> {{ pedido.id_pedido }}</span>
+      <span><strong>Data:</strong> {{ pedido.data_pedido | date:'dd/MM/yyyy HH:mm' }}</span>
+      <span><strong>Total:</strong> R$ {{ pedido.total | number:'1.2-2' }}</span>
+    </div>
+    <div class="sabores-list">
+      <div *ngFor="let sabor of pedido.sabores" class="sabor-item">
+        <img [src]="sabor.foto" [alt]="sabor.sabor" class="sabor-img">
+        <div class="sabor-info">
+          <h4>{{ sabor.sabor }}</h4>
+          <p><strong>Quantidade:</strong> {{ sabor.quantidade }}</p>
+          <p><strong>Preço unitário:</strong> R$ {{ sabor.preco_unitario | number:'1.2-2' }}</p>
+          <p><strong>Subtotal:</strong> R$ {{ sabor.subtotal | number:'1.2-2' }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -14,6 +14,9 @@ export class HomeComponent implements OnInit {
   // Lógica futura para pedidos e catálogo
 
   nome = '';
+  endereco = '';
+  telefone = '';
+  email = '';
   constructor (private request: RequestsService) {}
   ngOnInit() {
     
@@ -21,9 +24,12 @@ export class HomeComponent implements OnInit {
   }
   
   obterDados() {
-    this.request.makeRequest('http://localhost:8000/teste', 'GET').subscribe({
+    this.request.makeRequest('http://localhost:8000/restaurante', 'GET').subscribe({
       next: response => {
-        this.nome = response[1]['tx_ctu']
+        this.nome = response[0]['nome'];
+        this.endereco = response[0]['endereco'];
+        this.telefone = response[0]['telefone'];
+        this.email = response[0]['email'];
       },
       error: error => {
         console.error('erro no request');
@@ -31,20 +37,25 @@ export class HomeComponent implements OnInit {
     });
   }
   images = [
-    // {
-    //   img: 'molde-carrossel-portal-super.png',
-    //   alt: 'Imagem 1',
-    //   title: 'Imagem 1'
-    // },
     {
-      img: 'logo.png',
+      img: 'cantina.jpg',
+      alt: 'Imagem 1',
+      title: 'Imagem 1'
+    },
+    {
+      img: 'pizza1.jpg',
       alt: 'Imagem 2',
       title: 'Imagem 2'
-    }
+    },
+    {
+      img: 'pizza2.jpg',
+      alt: 'Imagem 3',
+      title: 'Imagem 3'
+    },
     // {
-    //   previewImageSrc: 'assets/images/3.jpg',
-    //   alt: 'Imagem 3',
-    //   title: 'Imagem 3'
+    //   img: 'rony.jpg',
+    //   alt: 'Imagem 4',
+    //   title: 'Imagem 4'
     // }
   ];
 
